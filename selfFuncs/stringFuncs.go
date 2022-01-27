@@ -35,3 +35,6 @@ func PalindromeDetect(sentence string) bool {
 	}
 
 }
+func MultAB(a float32, b int) float32 {
+	return a * float32(b)
+}

@@ -7,18 +7,20 @@ import (
 )
 
 func main() {
-	sentence := "ajitraga la lagartija"
 
-	reversedText := selfFuncs.ReverseSentence(sentence)
-	fmt.Println("hello world", reversedText)
-	fmt.Println(selfFuncs.SupressSpaces(reversedText))
+	var a int = 1
 
-	if selfFuncs.PalindromeDetect(sentence) {
-		fmt.Println("is palindrome")
-	}
+	b := &a
+	fmt.Println(*b)
+	*b = 100
+	fmt.Println(a, b)
 
-	if !selfFuncs.PalindromeDetect(sentence) {
-		fmt.Println("is not palindrome")
-	}
-
+	myPC := selfFuncs.Pc{Ram: 12, Disk: 200, Brand: "asus"}
+	laptop := selfFuncs.Pc{Ram: 8, Disk: 100, Brand: "dell"}
+	fmt.Println(myPC)
+	myPC.Ping()
+	myPC.DuplicateRAM()
+	fmt.Println(myPC)
+	laptop.DuplicateRAM()
+	fmt.Println(laptop)
 }
