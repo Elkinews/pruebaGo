@@ -8,6 +8,7 @@ import (
 
 func main() {
 	sentence := "ajitraga la lagartija"
+
 	reversedText := selfFuncs.ReverseSentence(sentence)
 	fmt.Println("hello world", reversedText)
 	fmt.Println(selfFuncs.SupressSpaces(reversedText))
@@ -15,4 +16,9 @@ func main() {
 	if selfFuncs.PalindromeDetect(sentence) {
 		fmt.Println("is palindrome")
 	}
+
+	if !selfFuncs.PalindromeDetect(sentence) {
+		fmt.Println("is not palindrome")
+	}
+
 }
