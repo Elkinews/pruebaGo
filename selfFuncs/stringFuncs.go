@@ -1,5 +1,8 @@
 package selfFuncs
 
+import "strings"
+
+//ReverseSentence , funcs that take an string and reorder all his characters , converting the lates character in the first
 func ReverseSentence(sentence string) string {
 	var textReverse string
 
@@ -19,4 +22,16 @@ func SupressSpaces(sentence string) string {
 		}
 	}
 	return SupressTextSpace
+}
+
+func PalindromeDetect(sentence string) bool {
+	var sentenceToLower string = strings.ToLower(sentence)
+	sentenceToLower = SupressSpaces(sentenceToLower)
+
+	if ReverseSentence(sentenceToLower) != sentenceToLower {
+		return false
+	} else {
+		return true
+	}
+
 }

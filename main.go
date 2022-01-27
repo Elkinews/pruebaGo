@@ -11,4 +11,8 @@ func main() {
 	reversedText := selfFuncs.ReverseSentence(sentence)
 	fmt.Println("hello world", reversedText)
 	fmt.Println(selfFuncs.SupressSpaces(reversedText))
+
+	if selfFuncs.PalindromeDetect(sentence) {
+		fmt.Println("is palindrome")
+	}
 }
